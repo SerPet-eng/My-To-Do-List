@@ -10,6 +10,7 @@ export default function AddTodo() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     if (!value.trim()) {
       setError('Input Empty');
     } else {
@@ -28,11 +29,11 @@ export default function AddTodo() {
             value={value}
             maxLength={30}
             onChange={(e) => setValue(e.target.value)}
-            className='rounded-md border-2 p-1 max-lg:w-4/5 md:w-3/4'
+            className='rounded-md border-2 p-1 max-lg:w-4/5 md:w-3/4 '
           />
           <button
             onClick={handleSubmit}
-            className='ml-4 rounded-md border-2 border-red-700 px-4 py-1 font-bold'
+            className='ml-4 rounded-md border-2 border-red-700 px-4 py-1 font-bold transition ease-in-out hover:bg-yellow-300 hover:text-white'
           >
             ADD
           </button>
